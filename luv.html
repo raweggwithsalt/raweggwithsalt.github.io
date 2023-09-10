@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title><3</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="<3>">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="anders">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/luv.css">
+        <script>
+            window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
+
+        </script>
+    </head>
+    <body>
+        <div class="loader"></div>
+        <div class="countdown">
+            <div class="time">
+                <h2 id="days">00</h2>
+                <small>Days</small>
+            </div>
+            <div class="time">
+                <h2 id="hours">00</h2>
+                <small>Hours</small>
+            </div>
+            <div class="time">
+                <h2 id="minutes">00</h2>
+                <small>Minutes</small>
+            </div>
+            <div class="time">
+                <h2 id="seconds">00</h2>
+                <small>Seconds</small>
+            </div>
+        </div>
+        
+        <script>
+let dayBox = document.getElementById("days");
+let hrBox = document.getElementById("hours");
+let minBox = document.getElementById("minutes");
+let secBox = document.getElementById("seconds");
+//Format: Date(year, month, day, hour, minute)
+//Year is counter from 0 to 11
+let endDate = new Date(2024, 8, 12, 0, 0);
+//Output value in milliseconds
+let endTime = endDate.getTime();
+function countdown() {
+  let todayDate = new Date();
+  //Output value in milliseconds
+  let todayTime = todayDate.getTime();
+  let remainingTime = endTime - todayTime;
+  //60sec => 1000 milliseconds
+  let oneMin = 60 * 1000;
+  //1hr => 60 minutes
+  let oneHr = 60 * oneMin;
+  //1 day => 24 hours
+  let oneDay = 24 * oneHr;
+  //Function to format number if it is single digit
+  let addZeroes = (num) => (num < 10 ? `0${num}` : num);
+  //If end dat is before today date
+  if (endTime < todayTime) {
+    clearInterval(i);
+    document.querySelector(
+      ".countdown"
+    ).innerHTML = `<h1>Countdown had expired!</h1>`;
+  }
+  //If end date is not before today date
+  else {
+    //Calculating remaining days, hrs,mins ,secs
+    let daysLeft = Math.floor(remainingTime / oneDay);
+    let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr);
+    let minsLeft = Math.floor((remainingTime % oneHr) / oneMin);
+    let secsLeft = Math.floor((remainingTime % oneMin) / 1000);
+    //Displaying Valurs
+    dayBox.textContent = addZeroes(daysLeft);
+    hrBox.textContent = addZeroes(hrsLeft);
+    minBox.textContent = addZeroes(minsLeft);
+    secBox.textContent = addZeroes(secsLeft);
+  }
+}
+let i = setInterval(countdown, 1000);
+countdown();
+        </script>
+    </body>
+</html>
