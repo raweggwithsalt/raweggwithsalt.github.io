@@ -38,6 +38,30 @@ body {
       transform: rotate(1turn);
     }
   }
+  .awalan{
+    text-align: center;
+    font-size: 60px;
+  }
+  .awalan1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .div1{
+    font-size: 20px;
+    display: flex;
+  }
+  .textdiv1{
+    margin-left: 200px;
+  }
+  .img1{
+    width: 25%;
+    height: 25%;
+  }
+  .divred{
+    color: white;
+    background-color: red;
+    width: 100%;
+  }
   .countdown{
     margin-left: 500px;
     display: flex;
