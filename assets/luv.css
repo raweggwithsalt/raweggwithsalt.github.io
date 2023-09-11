@@ -49,13 +49,70 @@ body {
   .div1{
     font-size: 20px;
     display: flex;
+    align-items: center;
   }
   .textdiv1{
-    margin-left: 200px;
+    margin-left: 100px;
   }
   .img1{
     width: 25%;
     height: 25%;
+  }
+  .div2{
+    font-size: 20px;
+    display: flex;
+    color: white;
+    background-color: #ff66c9;
+  }
+  .textdiv2{
+    margin-right: 100px;
+  }
+  .img2{
+    width: 25%;
+    height: 25%;
+  }
+  .div3{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #87ae73;
+  }
+  .div4{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: palevioletred;
+    background-color: #d6d696;
+  }
+  .div5{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #ff6682;
+  }
+  .div6{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #90EE90;
+  }
+  .div7{
+    font-size: 20px;
+    align-items: center;
+    color: white;
+    background-color: red;
+  }
+  .img7{
+    background-color: red;
+    width: 34%;
+    height: 53%;
+  }
+  .text7{
+    margin-left: 100px;
+    margin-right: 100px;
   }
   .divred{
     color: white;
@@ -79,7 +136,11 @@ body {
     line-height: 1;
     margin: 0 0 5px;
   }
-
+  .sunnydays{
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+  }
 
 
   
